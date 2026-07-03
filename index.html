@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get your turn in the spotlight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&family=Raleway:wght@100;700&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="text-white min-h-screen flex flex-col justify-between antialiased selection:bg-[#930069]/20 bg-fixed overflow-y-auto bg-black">
+
+  <!-- NAV BAR -->
+  <header class="w-full mx-auto px-8 pt-6 flex items-center justify-between z-50 relative">
+    <span class="text-[10px] font-bold tracking-[0.4em] text-neutral-200 uppercase">
+      MOMENT
+    </span>
+    <span class="text-[9px] font-medium tracking-widest text-[#930069] uppercase border border-[#930069]/20 bg-[#930069]/[0.04] px-3 py-1 rounded-full backdrop-blur-md animate-pulse">
+      COMING SOON
+    </span>
+  </header>
+
+  <!-- HERO VIEWPORT CONTAINER -->
+  <main class="w-full flex flex-col px-6 max-w-[95vw] mx-auto pt-12 pb-20 relative z-10">
+    <section id="hero-section">
+      <div class="space-y-3" id="hero-text">
+        <h1 class="text-4xl sm:text-6xl tracking-wide leading-[1.15] text-neutral-100 max-w-3xl">
+          YOUR MOMENT<span class="italic text-neutral-100" style="font-weight: 100;">, fair and square.</span>
+        </h1>
+        
+        <p class="text-xs sm:text-sm leading-relaxed font-light tracking-wide">
+          Built for individuals trying to get their creativity noticed.<span class="text-neutral-300"> No endless feed grind</span>, share what you are working on and get seen by people who actually cares without trying to play the algorithm.
+        </p>
+      </div>
+
+      <div id="hero-image">
+        <img src="img/logo.png" alt="Moment Logo" />
+      </div>
+    </section>
+
+    <!-- FLOATING INTERACTION DECK -->
+    <div class="w-full max-w-md mt-6">
+      <form onsubmit="handleWaitlistSubmit(event)" class="w-full flex flex-col sm:flex-row items-center gap-2 p-1.5 bg-white/[0.01] border border-white/[0.06] rounded-2xl backdrop-blur-xl focus-within:border-[#930069]/40 focus-within:bg-[#930069]/[0.02] transition-all duration-500">
+        <input 
+          type="email" 
+          placeholder="Enter your email..." 
+          required
+          class="w-full bg-transparent px-5 py-3 text-xs sm:text-sm text-white placeholder-neutral-500 focus:outline-none font-light tracking-wide"
+        >
+        <button type="submit" class="w-full sm:w-auto whitespace-nowrap px-6 py-3 bg-white text-black font-semibold rounded-xl hover:bg-[#930069] hover:text-white active:scale-[0.98] transition-all duration-300 text-xs sm:text-sm tracking-wide">
+          Join Waitlist
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="w-full relative z-20 bg-neutral-950/80 border-t border-white/[0.06] shadow-[0_-30px_60px_rgba(0,0,0,0.9)]">
+    <div class="max-w-5xl mx-auto px-6 py-24 space-y-36">
+      
+      <!-- SUBSECTION A: FEATURES -->
+      <section class="space-y-10">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">FEATURES</h2>
+          <div class="h-[1px] bg-white/[0.08] flex-1"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="pipeline-card relative overflow-hidden p-8 rounded-3xl bg-neutral-900/90 border border-white/[0.05] space-y-5 transition-all duration-500 hover:-translate-y-2">
+            <span class="font-mono text-xs text-[#930069] font-bold tracking-wider block">[ SHUFFLE ]</span>
+            <h3 class="text-2xl font-bold text-neutral-100 tracking-wide">Guaranteed Eyes</h3>
+            <p class="text-neutral-200 text-sm font-medium leading-relaxed">
+              When you drop your work here, you don't have to worry about getting buried by accounts with massive following. For the first few hours, your
+              post enters a randomized rotation within the specific topic pool. With this you can guarantee a fresh-fair slice of real attention even if you are just
+              starting out.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="pipeline-card relative overflow-hidden p-8 rounded-3xl bg-neutral-900/90 border border-white/[0.05] space-y-5 transition-all duration-500 hover:-translate-y-2">
+            <span class="font-mono text-xs text-[#930069] font-bold tracking-wider block">[ INTEREST ]</span>
+            <h3 class="text-2xl font-bold text-neutral-100 tracking-wide">Direct Curation</h3>
+            <p class="text-neutral-200 text-sm font-medium leading-relaxed">
+              When someone spots your work and wants to keep tabs on you, they simply click <span class="italic text-neutral-400">"interested".</span>
+              This moves you directly into their personal interest feed. Pure unmalipulated curation where your keep the audience you earn.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="pipeline-card relative overflow-hidden p-8 rounded-3xl bg-neutral-900/90 border border-white/[0.05] space-y-5 transition-all duration-500 hover:-translate-y-2">
+            <span class="font-mono text-xs text-[#930069] font-bold tracking-wider block">[ BOARD ]</span>
+            <h3 class="text-2xl font-bold text-neutral-100 tracking-wide">Dedicated Spaces</h3>
+            <p class="text-neutral-200 text-sm font-medium leading-relaxed">
+              This is where community anchor down. Every board is a dedicated space for a specific craft. Instead of a messy timeline, you can explore the boards that matter to you, conversation 
+              on each board are broken into clean messages that you can choose to dive into.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSECTION B: BREAKDOWN -->
+      <section class="space-y-10">
+        <div class="flex items-center gap-4">
+          <h2 class="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Breakdown</h2>
+          <div class="h-[1px] bg-white/[0.08] flex-1"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Card 1: Legacy Platforms -->
+          <div class="p-8 rounded-3xl bg-neutral-950 border border-neutral-800 space-y-6 hover:border-neutral-700 transition-all duration-300">
+            <div class="flex justify-between items-center border-b border-neutral-800 pb-4">
+              <h3 class="text-lg font-bold tracking-wider text-neutral-400 uppercase font-mono">Generic Social Media Networks</h3>
+            </div>
+            <ul class="space-y-4 text-sm font-medium text-neutral-400">
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 mt-0.5">✕</span>
+                <div><span class="text-neutral-200 font-semibold block">Algorithmic Favoritism:</span> Reach is heavily gated by popularity,
+                  completly burying smaller accounts to push massive creators.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 mt-0.5">✕</span>
+                <div><span class="text-neutral-200 font-semibold block">Forced Pushed Agendas:</span> Most feeds are intentionally manipulated with political or corporate trends
+                that you never asked for, prioritizing pushing certain narratives over organic content.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-red-500 mt-0.5">✕</span>
+                <div><span class="text-neutral-200 font-semibold block">Addictive Doom Scrolling:</span> The interface is designed with infinite, hyper-personalized loops specifically engineered to maximize engagement and time spent on the platform.</div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2: Moment Network -->
+          <div class="p-8 rounded-3xl bg-neutral-900 border-neutral-800 bg-gradient-to-br from-neutral-900 via-neutral-950 to-[#930069]/10 shadow-[0_0_50px_rgba(147,0,105,0.03)] space-y-6 hover:border-[#930069]/40 transition-all duration-300 relative group">
+            <div class="flex justify-between items-center border-b border-[#930069]/10 pb-4">
+              <h3 class="text-lg font-bold tracking-wider text-neutral-200 uppercase font-mono">Moment Network</h3>
+            </div>
+            <ul class="space-y-4 text-sm font-medium text-neutral-300">
+              <li class="flex items-start gap-3">
+                <span class="text-[#930069] font-bold mt-0.5">✓</span>
+                <div><span class="text-white font-semibold block">The Fair Spotlight:</span> Instead of favoring popular creators, the home feed is a wild shuffle of real work within your chosen tag interests.
+                Every single creator gets a fair chance to be seen.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#930069] font-bold mt-0.5">✓</span>
+                <div><span class="text-white font-semibold block">Zero Pushed Agendas:</span> No corporate or political narratives are forced into your space, you see exactly what you're interested in.</div>
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="text-[#930069] font-bold mt-0.5">✓</span>
+                <div><span class="text-white font-semibold block">Respect your time:</span> Nothing is engineered to exploit your attention or keep you hooked. You stay, hangout and leave when you are done.</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- SUBSECTION C: ABOUT -->
+      <section class="border border-white/[0.08] bg-neutral-900/40 backdrop-blur-md rounded-3xl p-8 md:p-12 flex flex-col lg:grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 space-y-6">
+          <div class="space-y-2">
+            <span class="font-mono text-xs text-[#930069] font-bold tracking-wider block">ABOUT</span>
+            <h2 class="text-3xl tracking-wide font-bold text-neutral-100">THE TRUTH</h2>
+          </div>
+          
+          <div class="space-y-4 text-sm font-normal text-neutral-300 leading-relaxed">
+            <p>
+              Moment will only exist if the people want it to exist. Instead of gatekeeping views or relying on invasive profiling, the system utilizes a fair system designed to support everyone equally. 
+              It is an architecture focused entirely around <strong class="text-white font-semibold">real community boards</strong>, direct curation, and respect for time.</p>
+            <p></p>
+            <p>
+              Because the platform refuses to track behavior or harvest user data, growth depends entirely on the <strong class="text-white font-semibold">community and quality of the content.</strong>
+              Any backing is welcome whether from individuals or external companies as long as it never compromises the core movement. 
+            </p>
+            <p></p>
+            <p>
+              To keep the servers running and cover the heavy costs of bandwidth, the system will rely on non-intrusive, board-specific sponsorships. These are clean, relevant promotions pinned strictly within specific community lounges, ensuring personal feeds stay untouched, 
+              user data stays private, and the core shuffle remains completely unmanipulated.
+            </p>
+            <p class="border-l-2 border-[#930069] pl-4 italic text-neutral-400 text-xs">
+              A network built for organic human expression can only be propelled into existence by the very audience that needs it. So if this speaks to you, consider joing our waitlist and help us get this off the ground.
+            </p>
+          </div>
+        </div>
+
+        <!-- The Action / Telemetry Dashboard Column -->
+        <div class="lg:col-span-5 flex flex-col items-center gap-6 w-full bg-black/50 border border-white/[0.04] p-6 rounded-2xl shadow-inner">
+          <div class="w-full space-y-1 text-center">
+            <div class="text-[10px] tracking-[0.2em] font-medium text-[#930069] uppercase">Intrested Individuals</div>
+            <div class="relative inline-block">
+              <div id="vote-counter" class="text-5xl font-bold tracking-tight text-neutral-100 tabular-nums">30</div>
+            </div>
+            <div class="text-[9px] font-mono text-neutral-500 uppercase tracking-widest pt-1">Show Your Interest</div>
+          </div>
+
+          <div class="w-full space-y-3">
+            <!-- Upvote Button -->
+            <button onclick="incrementVote()" id="vote-btn" class="w-full flex items-center justify-center gap-2 px-5 py-3 border border-white/10 bg-white text-black rounded-xl hover:bg-[#930069] hover:text-white hover:border-transparent active:scale-[0.98] transition-all duration-300 text-xs tracking-wider uppercase font-bold">
+              <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 24 24"><path d="M4 14h6v8h4v-8h6L12 4 4 14z"/></svg>
+              Upvote
+            </button>
+
+            <!-- Inline Email Linking Pool -->
+            <form onsubmit="handleWaitlistSubmit(event)" class="w-full flex items-center gap-2 p-1 bg-neutral-950 border border-white/[0.06] rounded-xl focus-within:border-[#930069]/40 transition-all duration-300">
+              <input type="email" placeholder="Enter your email" required class="w-full bg-transparent px-3 py-2 text-xs text-white placeholder-neutral-600 focus:outline-none font-light">
+              <button type="submit" class="whitespace-nowrap px-4 py-2 bg-neutral-900 border border-white/10 text-neutral-300 font-medium rounded-lg hover:text-white transition-all text-xs">
+                Join
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+    </div>
+
+    <!-- INTERNAL SCROLL FOOTER -->
+    <footer class="w-full max-w-5xl mx-auto px-6 pb-12 flex flex-col sm:flex-row items-center justify-between gap-4 text-[9px] text-neutral-600 tracking-[0.2em] uppercase border-t border-white/[0.04] pt-8">
+      <div>&copy; 2026 Moment Engine.</div>
+      <div class="flex gap-4 normal-case tracking-normal text-neutral-500 text-xs font-light">
+        <a href="#" class="hover:text-neutral-300 transition-colors">Privacy Map</a>
+        <a href="#" class="hover:text-neutral-300 transition-colors">Terms of Spec</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL LAYER -->
+  <div id="thank-you-modal" class="fixed inset-0 z-50 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-500">
+    <div onclick="closeModal()" class="absolute inset-0 bg-black/70 backdrop-blur-2xl"></div>
+    <div class="relative bg-neutral-950/90 border border-white/10 p-8 rounded-2xl w-full max-w-sm mx-4 shadow-2xl transform scale-95 transition-all duration-500 z-10 space-y-6">
+      <div class="flex items-center gap-3 border-b border-white/[0.06] pb-4">
+        <div class="w-8 h-8 bg-[#930069]/10 border border-[#930069]/30 rounded-lg flex items-center justify-center">
+          <svg class="w-4 h-4 text-[#930069]" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+        </div>
+        <div>
+          <h3 class="text-sm font-bold tracking-wider uppercase text-neutral-200">Waitlist Confirmed</h3>
+          <p class="text-[10px] font-mono text-neutral-500">EMAIL ADDED</p>
+        </div>
+      </div>
+      
+      <p class="text-xs font-light text-neutral-400 leading-relaxed">
+        Your email has been successfully added to the waitlist. We appreciate your interest and will notify you when the platform is ready for launch. Thank you for supporting Moment!
+      </p>
+
+      <div class="space-y-2">
+        <div class="text-[9px] font-mono uppercase text-neutral-500 tracking-wider">Share The Movement:</div>
+        <div class="grid grid-cols-2 gap-2">
+          <a href="https://twitter.com" target="_blank" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-[#930069]/30 rounded-xl text-[11px] font-medium tracking-wide transition-all">
+            <span>X.com</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="flex items-center justify-center gap-2 py-2.5 px-3 bg-white/[0.02] border border-white/[0.06] hover:bg-white/[0.04] hover:border-[#930069]/30 rounded-xl text-[11px] font-medium tracking-wide transition-all">
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+
+      <button onclick="closeModal()" class="w-full py-2.5 bg-neutral-100 text-black text-xs font-bold rounded-xl hover:bg-[#930069] hover:text-white transition-all">
+        Confirm & Close
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function handleWaitlistSubmit(event) {
+      event.preventDefault();
+      const modal = document.getElementById('thank-you-modal');
+      const contentBox = modal.querySelector('div:nth-child(2)');
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      contentBox.classList.remove('scale-95');
+      contentBox.classList.add('scale-100');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('thank-you-modal');
+      const contentBox = modal.querySelector('div:nth-child(2)');
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      contentBox.classList.remove('scale-100');
+      contentBox.classList.add('scale-95');
+    }
+
+    let voted = false;
+    function incrementVote() {
+      if(!voted) {
+        const counter = document.getElementById('vote-counter');
+        const btn = document.getElementById('vote-btn');
+        counter.innerText = parseInt(counter.innerText) + 1;
+        btn.innerHTML = `Upvote Confirmed`;
+        btn.classList.remove('bg-white', 'text-black');
+        btn.classList.add('border-[#930069]/40', 'bg-[#930069]/10', 'text-[#930069]', 'cursor-not-allowed');
+        btn.disabled = true;
+        voted = true;
+      }
+    }
+  </script>
+</body>
+</html>

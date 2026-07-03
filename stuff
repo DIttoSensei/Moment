@@ -1,0 +1,12 @@
+<!-- LARGE LOGO BLOCK -->
+    <div class="relative group">
+      <!-- Muted underlying ambient purple aura -->
+      <div class="absolute inset-0 bg-[#83016b]/15 rounded-full blur-3xl opacity-100 pointer-events-none"></div>
+      
+      <!-- Fixed real utility sizes & attached your CSS keyframe animation class -->
+      <img 
+        src="img/logo.png" 
+        alt="" 
+        class="h-56 w-56 sm:h-64 sm:w-64 object-contain opacity-0 animate-logo-load transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+      >
+    </div>
