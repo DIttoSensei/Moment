@@ -281,30 +281,47 @@
   </div>
 
   <script>
+  let voted = localStorage.getItem('moment_voted') === 'true';
+  const counterEl = document.getElementById('vote-counter');
+  const btn = document.getElementById('vote-btn');
+
+  function lockButton() {
+    btn.innerHTML = `Upvote Confirmed`;
+    btn.classList.remove('bg-white', 'text-black');
+    btn.classList.add('border-[#930069]/40', 'bg-[#930069]/10', 'text-[#930069]', 'cursor-not-allowed');
+    btn.disabled = true;
+  }
+
   async function loadCount() {
-  try {
-    const res = await fetch('/api/vote');
-    const data = await res.json();
-    counterEl.innerText = data.count ?? 30;
-  } catch (err) {
-    counterEl.innerText = 30;
+    try {
+      const res = await fetch('/api/vote');
+      const data = await res.json();
+      counterEl.innerText = data.count ?? 30;
+    } catch (err) {
+      counterEl.innerText = 30;
+    }
   }
-}
 
-async function incrementVote() {
-  if (voted) return;
-  lockButton();
-  voted = true;
-  localStorage.setItem('moment_voted', 'true');
+  async function incrementVote() {
+    if (voted) return;
+    lockButton();
+    voted = true;
+    localStorage.setItem('moment_voted', 'true');
 
-  try {
-    const res = await fetch('/api/vote', { method: 'POST' });
-    const data = await res.json();
-    counterEl.innerText = data.count;
-  } catch (err) {
-    console.error('Vote error:', err);
+    try {
+      const res = await fetch('/api/vote', { method: 'POST' });
+      const data = await res.json();
+      counterEl.innerText = data.count;
+    } catch (err) {
+      console.error('Vote error:', err);
+    }
   }
-}
+
+  document.addEventListener('DOMContentLoaded', () => {
+    loadCount();
+    if (voted) lockButton();
+  });
+
 
   async function handleWaitlistSubmit(event) {
     event.preventDefault();
