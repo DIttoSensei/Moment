@@ -194,7 +194,7 @@
           <div class="w-full space-y-1 text-center">
             <div class="text-[10px] tracking-[0.2em] font-medium text-[#930069] uppercase">Intrested Individuals</div>
             <div class="relative inline-block">
-              <div id="vote-counter" class="text-5xl font-bold tracking-tight text-neutral-100 tabular-nums">30</div>
+              <div id="vote-counter" class="text-5xl font-bold tracking-tight text-neutral-100 tabular-nums">0</div>
             </div>
             <div class="text-[9px] font-mono text-neutral-500 uppercase tracking-widest pt-1">Show Your Interest</div>
           </div>
@@ -296,9 +296,9 @@
     try {
       const res = await fetch('/api/vote');
       const data = await res.json();
-      counterEl.innerText = data.count ?? 30;
+      counterEl.innerText = data.count ?? 0;
     } catch (err) {
-      counterEl.innerText = 30;
+      counterEl.innerText = 0;
     }
   }
 
